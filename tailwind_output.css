@@ -604,6 +604,10 @@ video {
   visibility: collapse;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
