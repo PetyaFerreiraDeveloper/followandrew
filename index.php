@@ -1,1 +1,18 @@
-Hey i am new to wordpress
+<?php get_header() ?>
+
+
+<article class="content px-3 py-5 p-md-5">
+  <?php
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      // the_content();
+      // the first parameter below is the path to the temlplate part and the second is the type of template part
+      get_template_part('template-parts/content', 'archive');
+    }
+  }
+  ?>
+</article>
+
+
+<?php get_footer() ?>
