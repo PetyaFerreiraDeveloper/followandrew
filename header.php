@@ -25,7 +25,14 @@
       </button>
 
       <div id="navigation" class="collapse navbar-collapse flex-column">
-        <img class="mb-3 mx-auto logo" src="wp-content/themes/followandrew/assets/images/logo.png" alt="logo">
+        <?php
+        if (function_exists('the_custom_logo')) {
+          // grab the path to the custom logo- returns an array
+          $custom_logo_id = get_theme_mod('custom_logo');
+          $logo = wp_get_attachment_image_src($custom_logo_id);
+        }
+        ?>
+        <img class="mb-3 mx-auto logo" src="<?php echo $logo[0]; ?>" alt="logo">
 
         <?php
         wp_nav_menu(
