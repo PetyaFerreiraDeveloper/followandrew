@@ -738,3 +738,21 @@ div.comment:first-of-type {
 .comment-reply-title small a:hover {
   text-decoration: underline;
 }
+
+.navigation.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation.pagination .page-numbers {
+  background-color: var(--primary);
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.navigation.pagination .page-numbers.current {
+  background-color: var(--secondary);
+}
+
