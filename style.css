@@ -756,3 +756,15 @@ div.comment:first-of-type {
   background-color: var(--secondary);
 }
 
+#searchform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchform input{
+  border: 1px solid var(--light);
+  padding: 0.5rem;
+  height: 2.75rem;
+}
+
