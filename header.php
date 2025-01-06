@@ -62,5 +62,15 @@
 
   <div class="main-wrapper">
     <header class="page-title theme-bg-light text-center gradient py-5">
-      <h1 class="heading"><?php the_title(); ?></h1>
+      <?php if (is_home()) {
+        // Get the ID of the blog page
+        $blog_page_id = get_option('page_for_posts');
+        // Get the title of the blog page
+        $blog_page_title = get_the_title($blog_page_id);
+        // Display the title
+        echo '<h1 class="heading">' . esc_html($blog_page_title) . '</h1>';
+      } else {
+        the_title('<h1 class="heading">', '</h1>');
+      } ?>
+      <!-- <h1 class="heading"><?php the_title(); ?></h1> -->
     </header>
